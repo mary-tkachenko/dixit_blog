@@ -1,0 +1,56 @@
+body {
+    background-image: url("/images/wallpaper/lion.jpg");
+    color: #292929;
+    background-size:cover;
+}
+
+.field, h1, #button {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(192,192,192,0.7);
+}
+
+form {
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+#action_input {
+    background: transparent;
+    /* border: 1px solid white; */
+    background-color: rgba(192, 192, 192, 0.8);
+    color: white;
+}
+
+#mainpage {
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #292929;
+    font-size: 20px;
+
+    
+}
+
+.item  {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin-right: 618px;
+    width: 267px;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+#mainpage:hover {
+    color: white;
+}
+
+#list {
+    margin-top: 131px;
+    font-size: 20px;
+}
