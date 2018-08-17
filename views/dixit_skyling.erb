@@ -1,0 +1,33 @@
+
+<div id="user_page">
+<h1>WELCOME TO THE DIXIT WORLD, <span> <%=get_current_user.nickname%> </span>!</h1>
+
+
+
+<div class="ui list" id="list">
+  <div class="item">
+    <i class="star icon"></i>
+    <div class="content">
+      <a href="/dixit/<%=get_current_user.id%>/blog">YOUR BLOG</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="pencil alternate icon"></i>
+    <div class="content">
+      <a href="/dixit/<%=get_current_user.id%>/create" >CREATE A POST</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="child icon"></i>
+    <div class="content">
+      <a href="/dixit/<%=get_current_user.id%>/friendlist">FRIENDLIST</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="sign out alternate icon"></i>
+    <div class="content">
+      <a href="/dixit/sign_out">SIGN OUT</a>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<h1>Friendlist</h1>
+
+<div id="feed_container">
+<div class="ui segment" style="height:616px;overflow:scroll; background: transparent; border: none;">
+<% @all_users.reverse.each do |user| %>
+      <% user_posts = user.posts %>
+      <% if user_posts.length > 0 %>
+          <a href="/dixit/<%= user.id %>/blog" class="user_link" style="text-transform: uppercase;"><%= user.nickname %></a> updated the blog <span style="color:blue"> </span> with:
+          <div class="image_container">
+            <% user_posts = user.posts %>
+            <% user_posts.reverse.take(20).each do |post| %>
+            <div class="news">
+            <p><%= post.date %></p>
+            <div class="image_news">
+              <a href="/dixit/friendlist/posts/<%= post.id %>">
+                <img src="<%= post.visual.image_url %>" width='100px'>
+              </a>
+              </div>
+              <%# <p><%= post.date %></p>
+              </div>
+            <% end %>
+            </div>
+      <% end %>
+<% end %>
+</div>
+</div>
+
+<div id="back_to"><a href="/mainpage/<%=get_current_user.id%>"><i class="home icon"></i>Back to the main page</a></div>
+
+
+
