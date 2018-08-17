@@ -1,0 +1,42 @@
+
+
+
+<form method="POST" action="/dixit/posts/<%= @specific_post.id %>"> 
+    <input type="hidden" name="_method" value="PUT">
+<div class="ui card" id="post_card">
+  <div class="content">
+    <div class="header" style="margin-top: 10px; font-family: 'Love Ya Like A Sister', cursive;"><textarea type="text" name="title" placeholder="title" value="<%= @specific_post.title %>" style="border: none; resize: none;"><%= @specific_post.title %></textarea></div>
+    <div class="meta" style="font-family: 'Love Ya Like A Sister', cursive;"><textarea type="text" name="date" placeholder="date" value="<%= @specific_post.date %>" style="border: none;resize: none;"><%= @specific_post.date %></textarea></div>
+    <div class="description" style="font-family: 'Love Ya Like A Sister', cursive;">
+      <textarea type="text" name="text" style="height:300px;overflow:scroll; background: transparent; border: none; width: 564px; margin-left: 25px;resize: none;"><%= @specific_post.text %></textarea>
+      </div>
+    </div>
+  </div>
+  <select name="visual_id">
+    <% @all_images.each do |image| %>
+        <% if image.id == @specific_post.visual_id %>
+            <option value="<%= image.id %>" selected="selected"><%= image.name %></option>
+        <% else %>
+            <option value="<%= image.id %>"><%= image.name %></option>
+        <% end %>
+    <% end %>
+    </select>
+    </br>
+
+  <input type="submit" value="Submit" id="submit_button">
+</form>
+
+<form method="POST" action="/dixit/posts/<%=@specific_post.id%>">
+    <input type="hidden" name="_method" value="DELETE" id="delete_button">
+    <input type="submit" value="Delete">
+</form>
+
+<div>     
+
+<div class="button button2">
+   <i class="star icon"></i>
+    <a href="/dixit/<%=get_current_user.id%>/blog">BACK TO THE BLOG</a>
+</div>
+
+
+ 

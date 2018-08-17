@@ -1,0 +1,29 @@
+<div class="ui card" id="post_card">
+  <div class="content">
+    <div class="header" style="margin-top: 10px; font-family: 'Love Ya Like A Sister', cursive;"><%= @specific_post.title %></div>
+    <div class="meta" style="font-family: 'Love Ya Like A Sister', cursive;"><%= @specific_post.date %></div>
+    
+    <div class="description" style="font-family: 'Love Ya Like A Sister', cursive;">
+    <div class="ui segment" style="height:350px;overflow:scroll; background: transparent; border: none;">
+      <%= @specific_post.text %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="buttons">
+<div class="button">
+   <i class="star icon"></i>
+    <a href="/dixit/<%=get_current_user.id%>/blog">BACK TO THE BLOG</a>
+</div>
+<div class="button">
+   <i class="edit icon"></i>
+    <a href="/dixit/posts/<%= @specific_post.id %>/edit">EDIT POST</a>
+</div>
+ <div class="button"> 
+    <i class="trash alternate icon"></i>
+    <a href="/dixit/posts/<%= @specific_post.id %>/edit">DELETE POST</a>
+</div>
+</div>
+ 
+
