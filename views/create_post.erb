@@ -1,0 +1,43 @@
+<h1>CREATE YOUR POST, DEAR <span> <%=get_current_user.nickname%> </span>!</h1>
+
+
+<form class="ui form" method="POST" action="/dixit/post/new">
+  <div class="field">
+    <label style="color: white; font-size:20px;">TITLE</label>
+    <input type="text" name="title" placeholder="TITLE" id="action_input" style="height: 30px;">
+  </div>
+  <div class="field">
+    <label style="color: white; font-size:20px;">DATE</label>
+    <input type="text" name="date" placeholder="DATE" id="action_input" style="height: 30px;">
+  </div>
+  
+  <div class="field">
+    <label style="color: white; font-size:20px;">TEXT</label>
+    <textarea type="text" name="text" placeholder="TEXT" id="action_input" style="height: 200px;"></textarea>
+    <%# <div class="ui segment" style="height:100px;overflow:scroll; background: transparent; border: none; word-wrap: break-word;"> %>
+  <%# </div> %>
+  </div>
+   <div class="field">
+      <label style="color: white; font-size:20px;">VISUAL</label>
+      <select class="ui fluid dropdown" name="visual_id" id="action_input">
+      <% @all_images.each do |image| %>
+        <option value="<%= image.id %>"><%= image.name %></option>
+      <% end %>
+      </select>
+    </div>
+  <button class="ui button" type="submit" value="Submit" id="button">POST</button>
+</form>
+
+<div class="ui list" id="list">
+  <div class="item" style="background-color: rgba(255, 255, 255, 0.5); padding: 10px; margin-right: 780px;">
+    <i class="home icon"></i>
+    <div class="content">
+      <a href="/mainpage/<%=get_current_user.id%>" id="mainpage">Back to the main page</a>
+    </div>
+  </div>
+
+
+
+
+
+

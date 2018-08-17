@@ -1,0 +1,18 @@
+<h1 style="margin-top: 20px;">HERE IS THE WORLD OF <%=@specific_user.nickname%></h1>
+
+<% @all_posts_of_specific_user.each do |post| %>
+    <p class="visual" style="position: absolute;" data-load-visual-x="<%= post.visual_x_position %>" data-load-visual-y="<%= post.visual_y_position %>" data-id="<%= post.id %>">
+        <a href="/dixit/posts/<%= post.id %>"><img src="<%= post.visual.image_url %>" width='200px'></a>
+    </p>
+<% end %>
+<div id="menu">
+<a href="/dixit/<%=get_current_user.id%>/create"><i class="pencil alternate icon"></i>CREATE A POST</a>
+<a href="/mainpage/<%=get_current_user.id%>"><i class="home icon"></i>BACK TO THE MAIN PAGE</a>
+<a href="/dixit/sign_out"><i class="sign out alternate icon"></i>SIGN OUT</a>
+<a href="/dixit/<%=get_current_user.id%>/friendlist"><i class="child icon"></i>FRIENDLIST</a></h2>
+
+<div class="ui slider checkbox" id="edit_blog"> 
+  <input type="checkbox" name="newsletter">
+  <label><i class="edit icon"></i>EDIT MODE</label> 
+</div>
+</div>
