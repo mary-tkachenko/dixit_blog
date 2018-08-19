@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
     attachToggle();
 });
 
+// function that loads original position of the image(visual)
 function loadOriginalPosition() {
     $('.visual').each(function() {
         const $element = $(this);
@@ -15,6 +16,7 @@ function loadOriginalPosition() {
     });
 }
 
+// function that adds toggle (from Semantic UI) which helps to controll edit mode
 function attachToggle() {
     $('#edit_blog').checkbox({
         onChecked: editOn,
@@ -22,6 +24,7 @@ function attachToggle() {
     });
 }
 
+// function when toggle is in on edit mode
 function editOn() {
     console.log('Edit on');
 
@@ -40,6 +43,7 @@ function editOn() {
     });
 }
 
+// function when toggle is in off edit mode
 function editOff() {
     console.log('Edit off');
 
@@ -50,6 +54,7 @@ function editOff() {
     interact('.visual').draggable(false);
 }
 
+// function to save coordinates and to send them via axios to the database
 function saveCoordinates(element) {
     // to axis
     $element = $(element);
@@ -71,6 +76,7 @@ function saveCoordinates(element) {
     console.log(params);
 }
 
+// function when to actually get position (from Interact js library)
 function dragMoveListener(event) {
     const target = event.target;
 
