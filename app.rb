@@ -16,15 +16,14 @@ before do
         @specific_user = User.find(session[:user_id])
     end
 end
-
+# mainpage
 get "/" do
     erb :index, :layout => :layout_mainpage
 end
-
+# sign in page
 get "/dixit/sign_in" do
     erb :sign_in, :layout => :layout_user
 end
-
 
 post "/dixit/sign_in" do
     @user = User.find_by(username: params[:username])
@@ -40,21 +39,17 @@ post "/dixit/sign_in" do
       redirect "/mainpage/#{session[:user_id]}"
     else
       # lets the user know that something is wrong
-  
       # if user does not exist or password does not match then
       #   redirect the user to the sign in page
       redirect "/dixit/sign_in"
     end
   end
   
-  # displays signup form
-  #   with fields for relevant user information like:
-  #   username, password
+  # sign up
   get "/dixit/sign_up" do
     erb :sign_up, :layout => :layout_user
   end
 
-  
   post "/dixit/sign_up" do
     @user = User.create(
       nickname: params[:nickname],
@@ -83,22 +78,23 @@ post "/dixit/sign_in" do
     redirect "/"
   end
   
-  
-  get '/users/:id/edit' do 
-    if session[:user_id] == params[:id]
-      #Access thier user profile edit page
-    else
-      #Redirect them and tell them they do not have access to edit other peoples profile pages
-    end
-  end
+ 
+#   get '/users/:id/edit' do 
+#     if session[:user_id] == params[:id]
+#       #Access thier user profile edit page
+#     else
+#       #Redirect them and tell them they do not have access to edit other peoples profile pages
+#     end
+#   end
 
-
+#mainpage of the signed in user
 get "/mainpage/:id" do 
     # @specific_user = User.find(params[:id])
     # @specific_user = User.find(session[:user_id])
     erb :dixit_skyling, :layout => :layout_page_for_user
 end
 
+#blog of the signed in user
 get "/dixit/:user_id/blog" do 
     @specific_user = User.find(params[:user_id])
     @all_posts_of_specific_user = Post.where(user_id: @specific_user.id).order(:id)
@@ -106,14 +102,14 @@ get "/dixit/:user_id/blog" do
 end
 
 # @todo: remove id
+#friendlist of the signed in user
 get "/dixit/:id/friendlist" do 
     @all_users = User.all
-    # @all_posts = Post.all
-    
     erb :friendlist, :layout => :layout_friendlist
 end
 
 # @todo: remove id
+#creat post of the signed in user
 get '/dixit/:id/create' do 
     @all_images = Visual.all
     @all_posts = Post.all
@@ -130,11 +126,11 @@ post '/dixit/post/new' do
         visual_y_position: 100,
         visual_id: params[:visual_id],
         user_id: @specific_user.id,
-
     )
     redirect "/dixit/#{session[:user_id]}/blog"
 end
 
+#specific post of the signed in user
 get '/dixit/posts/:id' do 
     @specific_post = Post.find(params[:id])
     # @specific_post_image = Visual.find(@specific_post.visual_id)
@@ -142,6 +138,7 @@ get '/dixit/posts/:id' do
     erb :specific_post, :layout => :layout_post
 end
 
+#specific post of friends
 get '/dixit/friendlist/posts/:id' do 
     @specific_post = Post.find(params[:id])
     # @specific_post_image = Visual.find(@specific_post.visual_id)
@@ -149,6 +146,7 @@ get '/dixit/friendlist/posts/:id' do
     erb :friendlist_specific_post, :layout => :layout_friend_post
 end
 
+#edit post
 get '/dixit/posts/:id/edit' do
     @specific_post = Post.find(params[:id])
     @all_images = Visual.all
@@ -157,7 +155,6 @@ get '/dixit/posts/:id/edit' do
 end
 
 put '/dixit/posts/:id' do 
-    # @specific_user = User.find(session[:user_id])
     @specific_post = Post.find(params[:id])
     @specific_post.update(
         title: params[:title], 
@@ -179,7 +176,7 @@ put '/dixit/posts/:id/update-coordinates' do
     )
     {:result => params}.to_json
 end
-
+#delete post
 delete '/dixit/posts/:id' do
     @specific_post = Post.delete(params[:id])
     redirect "/dixit/#{session[:user_id]}/blog"
