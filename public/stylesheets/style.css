@@ -1,0 +1,41 @@
+body {
+  background-image: url("/images/wallpaper/castle.jpg");
+  background-size: cover;
+  color: #292929;
+  height: auto; }
+  body h1 {
+    font-size: 43px; }
+  body h1, body #about, body a {
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #292929;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 50px;
+    margin-right: 50px; }
+  body #welcome {
+    text-align: center;
+    margin-top: 111px; }
+  body #about {
+    margin-top: 94px;
+    text-indent: 30px;
+    font-size: 20px; }
+    body #about #about p {
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+  body #user_come_in {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    font-size: 20px; }
+    body #user_come_in #user_come_in a {
+      width: 136px;
+      text-align: center; }
+      body #user_come_in #user_come_in a #user_come_in a:hover {
+        background-color: rgba(225, 225, 225, 0.9);
+        color: white; }
+  body #welcome a, body #about a {
+    background-color: rgba(192, 192, 192, 0.7); }
+
+/*# sourceMappingURL=style.css.map */

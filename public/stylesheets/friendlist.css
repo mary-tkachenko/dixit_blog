@@ -1,0 +1,38 @@
+body {
+  background-image: url("/images/wallpaper/animals.jpg");
+  background-size: cover; }
+  body body, body a, body p, body h1 {
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #292929; }
+  body #feed_container {
+    background-color: rgba(225, 225, 225, 0.9);
+    width: 1300px;
+    margin-left: 70px; }
+    body #feed_container .image_container {
+      display: flex;
+      margin-left: 40px;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    body #feed_container .image_news {
+      height: 200px;
+      margin: 30px; }
+      body #feed_container .image_news .image_news img:hover {
+        opacity: 0.7; }
+    body #feed_container p {
+      text-align: center; }
+    body #feed_container a, body #feed_container p {
+      font-size: 20px; }
+    body #feed_container h1 {
+      padding-top: 50px;
+      text-align: center; }
+    body #feed_container .user_link {
+      margin-left: 20px; }
+    body #feed_container a:hover, body #feed_container #back_to:hover {
+      color: white; }
+  body #back_to {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    width: 256px;
+    margin-top: 53px; }
+
+/*# sourceMappingURL=friendlist.css.map */

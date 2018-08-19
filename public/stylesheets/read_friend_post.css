@@ -1,0 +1,51 @@
+body {
+  background-image: url("/images/wallpaper/night.jpg");
+  background-size: cover;
+  height: auto; }
+  body #post_card {
+    width: 634px;
+    margin: auto;
+    margin-top: 100px;
+    height: 450px;
+    opacity: 0.7; }
+    body #post_card .header {
+      text-align: center;
+      font-family: 'Love Ya Like A Sister', cursive; }
+  body #buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 209px; }
+    body #buttons .button {
+      background-color: rgba(220, 220, 220, 0.5);
+      padding: 10px; }
+      body #buttons .button .button a {
+        color: #292929;
+        font-family: 'Love Ya Like A Sister', cursive; }
+        body #buttons .button .button a .button a:hover {
+          color: white; }
+  body select {
+    margin-left: 410px;
+    margin-top: 10px;
+    background-color: rgba(220, 220, 220, 0.7);
+    width: 100px; }
+  body #buttons2 {
+    display: flex;
+    margin-left: 831px; }
+    body #buttons2 .button2 {
+      margin-top: 98px;
+      width: 177px; }
+  body input {
+    background-color: rgba(220, 220, 220, 0.7);
+    border: none;
+    border-radius: 8%;
+    height: 23px;
+    width: 79px;
+    margin-left: 814px;
+    margin-top: 10px; }
+  body input:focus,
+  body select:focus,
+  body textarea:focus,
+  body button:focus {
+    outline: 1px #555 solid; }
+
+/*# sourceMappingURL=read_friend_post.css.map */
