@@ -18,7 +18,6 @@
   <li>See friendlist: latest updates, visuals, date of update</li>
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/friendlist.png?raw=true" width="400"> 
   <li>Move a visual and appent it wherever user wants. The position will be saved and can be edited usind toggle tool.</li>
-  <p>Examples</p>
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/blog1.png?raw=true" width="400"> 
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/blog2.png?raw=true" width="400"> 
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/blog3.png?raw=true" width="400"> 
