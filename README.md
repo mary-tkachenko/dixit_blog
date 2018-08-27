@@ -1,7 +1,8 @@
 <p><strong><a href="https://sheltered-harbor-88953.herokuapp.com/">Dixit Blog </a></strong></p>
 <p>Fullstack blog website inspired by <a href="https://en.wikipedia.org/wiki/Dixit_(card_game)">Dixit Game</a>.</p>
+
 <p><strong> About </strong></p>
-The main idea of the blog is the imaginationa and ability to describe your inner world with visual power. Blog looks like picture, moodboard, photo gallery – any type of combination of images user can create. Behind every visual (photo, image, gif) ther is a post. User uploads a post and uses a picture like a representation. So his blog friend will see first an image, wondering and gaining thoughts about it and than — can read the actual post.
+<p>The main idea of the blog is the imaginationa and ability to describe your inner world with visual power. Blog looks like picture, moodboard, photo gallery – any type of combination of images user can create. Behind every visual (photo, image, gif) ther is a post. User uploads a post and uses a picture like a representation. So his blog friend will see first an image, wondering and gaining thoughts about it and than — can read the actual post.</p>
 
 </br>
 
