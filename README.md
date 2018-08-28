@@ -24,7 +24,7 @@
 </ul>
 
 
-<p><strong> Built With: </strong></p>
+<p><strong> Built With </strong></p>
 <p>Sinatra, Interact.js, Semantic Ui, Koala, VSC</p>
 
 
