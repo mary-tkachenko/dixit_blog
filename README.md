@@ -12,7 +12,9 @@
 <ul>
   <li>Log In, Log Out, Sign Up</li>
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/login.png?raw=true" width="400">
-  <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/signup.png?raw=true" width="400"> 
+  <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/signup.png?raw=true" width="400">
+  <li>User page</li>
+  <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/userpage.png?raw=true" width="400">
   <li>Create post (title, date, text, chooose (upload in the future) a visual.</li>
   <img src="https://github.com/mary-tkachenko/dixit_blog/blob/master/screens/createpost.png?raw=true" width="400">
   <li>See friendlist: latest updates, visuals, date of update</li>
@@ -26,6 +28,9 @@
 
 <p><strong> Built With </strong></p>
 <p>Sinatra, Interact.js, Semantic Ui, Koala, VSC</p>
+
+
+
 
 
 
